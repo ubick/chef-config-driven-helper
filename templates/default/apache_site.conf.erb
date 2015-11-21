@@ -52,7 +52,7 @@
     AllowOverride <%= @params['parse_htaccess'] ? "All" : "None" %>
 
     Order allow,deny
-<%= @params['allow_from'] ? @params['allow_from'].map { |ip| "    Allow from #{ip}\n" } : "    Allow from all" %>
+<%= @params['allow_from'] ? @params['allow_from'].map { |ip| "    Require ip #{ip}\n" } : "    Require all granted" %>
 
     DirectoryIndex index.php
 
