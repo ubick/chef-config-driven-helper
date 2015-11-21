@@ -1,6 +1,6 @@
 default['nginx']['sites'] = {}
 default['apache']['sites'] = {}
-default['apache']['default_modules'] << filter
+default['apache']['default_modules'] << 'filter'
 
 default['ssl_certs'] = {}
 
