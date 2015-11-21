@@ -7,7 +7,7 @@ version           "1.5.0"
 
 depends "apache2", "~> 1.8"
 depends 'iptables-ng', '~> 2.2.0'
-depends "mysql", "~> 4.0"
+depends "mysql", "~> 6.1"
 depends 'nginx', '< 2.4.4'
 depends "database", "~> 2.0"
 depends "build-essential", "~> 1.4"
