@@ -22,7 +22,7 @@ define :app_vhost, :server_type => nil, :site => {} do
     service_name = type == 'nginx' ? type : 'apache2'
     name = protocol == 'https' ? "#{params[:name]}.ssl" : params[:name]
 
-    template "#{node[type]['dir']}/sites-available/#{name}" do
+    template "#{node[type]['dir']}/sites-available/#{name}.conf" do
       source site["template"]
       cookbook site["cookbook"]
 
