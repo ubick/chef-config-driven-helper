@@ -51,7 +51,6 @@
 
     AllowOverride <%= @params['parse_htaccess'] ? "All" : "None" %>
 
-    Order allow,deny
 <%= @params['allow_from'] ? @params['allow_from'].map { |ip| "    Require ip #{ip}\n" } : "    Require all granted" %>
 
     DirectoryIndex index.php
@@ -175,16 +174,14 @@
        when 'static' %>
     SetHandler None
     <% when 'restricted' %>
-      Order deny,allow
-      Deny from all
+      Require all denied
     <% end %>
   </Location>
   <% end %>
 
   <% (@params['restricted_dirs'] || []).each do |dir| %>
   <Directory <%= @params['docroot'] %>/<%= dir %>>
-      Order deny,allow
-      Deny from all
+      Require all denied
   </Directory>
   <% end %>
 
