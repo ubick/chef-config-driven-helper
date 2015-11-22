@@ -39,14 +39,14 @@ end
 default['iptables-standard']['allowed_incoming_ports'] = {
   "http" => "http",
   "https" => "https",
-  "ssh" => "ssh",
-  "socket" => "/var/run/mysql-default/mysqld.sock"
+  "ssh" => "ssh"
 }
 
 default['mysql']['connections']['default'] = {
   :username => "root",
   :password => node["mysql"]["server_root_password"],
-  :host => "localhost"
+  :host => "localhost",
+  :socket => "/var/run/mysql-default/mysqld.sock"
 }
 
 default['capistrano']['user_data_bag'] = 'users'
