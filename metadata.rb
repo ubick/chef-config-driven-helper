@@ -9,7 +9,7 @@ depends "apache2", "~> 3.1.0"
 depends 'iptables-ng', '~> 2.2.0'
 depends "mysql", "~> 6.1"
 depends 'nginx', '< 2.4.4'
-depends "database", "~> 2.0"
+depends "database", "~> 4.0.9"
 depends "build-essential", "~> 1.4"
 depends 'ssh_known_hosts', '~> 2.0'
 
