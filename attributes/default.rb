@@ -39,7 +39,8 @@ end
 default['iptables-standard']['allowed_incoming_ports'] = {
   "http" => "http",
   "https" => "https",
-  "ssh" => "ssh"
+  "ssh" => "ssh",
+  "socket" => "/var/run/mysql-default/mysqld.sock"
 }
 
 default['mysql']['connections']['default'] = {
